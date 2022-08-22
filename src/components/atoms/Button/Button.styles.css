@@ -1,0 +1,28 @@
+.button{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+.button-style {
+  margin-bottom: 2px;
+}
+
+.button-style:hover {
+  background: #5883A3!important;
+}
+
+.button-style:hover .text-style {
+  color: #FFFC01!important;
+}
+
+.button.only-icon {
+  text-align: center;
+  justify-content: center;
+}
+.button.toogle-eye-icon:hover{
+  background-color: #f8f9fa !important;
+}
+.button.only-icon .image-style {
+  margin: 0!important;
+}
