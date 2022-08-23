@@ -17,13 +17,11 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 export const ButtonIcon = Template.bind({});
 ButtonIcon.args = {
   variant: 'only-icon',
-  fontSize: 14,
-  color: '#fff',
   width: '48px',
   height: '48px',
   padding: '16px 9px',
   margin: '0',
-  backgroundColor: '#253A5A',
+  backgroundColor: '#e7eaf3',
   border: 'none',
   borderRadius: 'none',
   linkIcon: Images.SearchIcon,
@@ -34,17 +32,15 @@ ButtonIcon.args = {
 export const ButtonIconText = Template.bind({});
 ButtonIconText.args = {
   variant: 'button-style',
-  fontSize: 14,
-  color: '#fff',
-  width: '216px',
-  height: '48px',
-  padding: '16px 9px',
+  width: '232px',
+  height: '38px',
+  padding: '0px 24px 0px 45px',
   margin:'0 0',
-  backgroundColor: '#253A5A',
-  border: 'none',
-  borderRadius: 'none',
+  backgroundColor: '#fff',
+  border: '1px solid #e0f3ff',
+  borderRadius: '4px',
   linkIcon: Images.DashboardIcon,
-  title: "Dashboard",
+  title: "Dashboard AI-TOEIC",
   onClick: action('on-click'),
 };
 export const ButtonToogleEye = Template.bind({});

@@ -2,8 +2,6 @@ import {ReactNode} from 'react';
 
 export interface ButtonProps {
   variant?: string;
-  fontSize?: number;
-  color?: string;
   width?: string | number;
   height?: string | number;
   padding?: string;

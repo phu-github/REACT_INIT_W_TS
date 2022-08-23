@@ -6,14 +6,12 @@ import {Text} from '../Text'
 
 export const Button: React.FC<ButtonProps> = ({
     variant='button-style',
-    fontSize = 14,
-    color= '#000000',
-    width= '216px',
+    width= '280px',
     height= '48px',
     padding= '0',
     margin= '0',
-    backgroundColor= "#4d6992",
-    border = 2,
+    backgroundColor= "#ffffff",
+    border = "none",
     borderRadius= "none",
     title,
     linkIcon,
@@ -21,9 +19,9 @@ export const Button: React.FC<ButtonProps> = ({
     ...rest
 }) => {
     return (
-        <button onClick={onClick} className={`button ${variant}`} style={{ fontSize, color, width, height, backgroundColor, border, borderRadius }} {...rest} >
+        <button onClick={onClick} className={`button ${variant}`} style={{width, height, backgroundColor, border, borderRadius }} {...rest} >
             {linkIcon && <Image width="25px" height="25px" margin= "0 0 0 5px" srcImg={linkIcon} />}
-            {title && <Text children={title} fontSize={14} margin= "0 10px" color="#fff" />}
+            {title && <Text children={title} fontSize={14} fontWeight={300} margin= "0 10px" color="#1a1a1a" />}
         </button>
     );
 };

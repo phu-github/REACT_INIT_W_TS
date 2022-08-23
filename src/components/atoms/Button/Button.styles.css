@@ -9,11 +9,11 @@
 }
 
 .button-style:hover {
-  background: #5883A3!important;
+  background: #e8f2ff!important;
 }
 
 .button-style:hover .text-style {
-  color: #FFFC01!important;
+  color : Black !important;
 }
 
 .button.only-icon {

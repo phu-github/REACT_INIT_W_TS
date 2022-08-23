@@ -16,6 +16,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   children: 'Primary Text',
   fontSize: 14,
+  fontWeight: 300,
   color: 'black',
 };
 
@@ -23,6 +24,7 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   children: 'Secondary Text',
   fontSize: 12,
+  fontWeight: 300,
   color: 'gray',
   margin: "0"
 };
@@ -31,6 +33,7 @@ export const Tertiary = Template.bind({});
 Tertiary.args = {
   children: 'Tertiary Text',
   fontSize: 10,
+  fontWeight: 300,
   color: 'black',
   margin: "0"
 };

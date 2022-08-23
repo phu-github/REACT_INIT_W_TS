@@ -8,6 +8,8 @@ import Avatar from '../assets/images/avatar.svg';
 import Logout from '../assets/images/logout.svg';
 import OpenEye from '../assets/images/open-eye.svg';
 import CloseEye from '../assets/images/close-eye.svg';
+import Book from '../assets/images/book.svg'
+import Grade from '../assets/images/grade.svg'
 
 export const Images = {
   PH2Logo,
@@ -19,5 +21,7 @@ export const Images = {
   Avatar,
   Logout,
   OpenEye,
-  CloseEye
+  CloseEye,
+  Book,
+  Grade,
 }
