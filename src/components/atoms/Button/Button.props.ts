@@ -11,5 +11,6 @@ export interface ButtonProps {
   borderRadius?: string;
   linkIcon?:string;
   title?: string;
+  isActive?: string
   onClick?: () => void;
 }

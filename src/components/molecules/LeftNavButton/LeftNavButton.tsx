@@ -8,26 +8,31 @@ interface LeftNavButton {
 }
 
 export const LeftNavButton: React.FC<LeftNavButtonProps> = ({
-    leftNavBtnArr,
+    leftNavBtnArr=[],
 }) => {
 
-  console.log("========== leftNavBtnArr", typeof(leftNavBtnArr))
-  console.log("========== leftNavBtnArr", leftNavBtnArr)
+  const [active, setActive] = useState([...leftNavBtnArr] as any);
+  
 
-
-  const [changeACtive, setChangeACtive] = useState<LeftNavButton>(
-     {id: 1, activeObject: 'null'}
-  );
   const handleNavLeftBtn = (index: number) => {
-    console.log("leftNavBtnArr", {...leftNavBtnArr});
-    console.log("changeACtive", changeACtive);
-    // setChangeACtive({...leftNavBtnArr, });
-  }
+    let activeTemp = [...leftNavBtnArr];
 
+    // Way to clone array object by using .map + rest
+    let array2 = activeTemp.map((a: any) => {
+      var returnValue = {...a};
+      if (a.id == index) {
+        returnValue.activeObject = "active";
+      }
+      return returnValue
+    });
+
+    setActive([...array2]);
+  }
+  console.log("active=", active);
   return (
       <div className="button-section-group fixed">
         {
-            leftNavBtnArr?.map((btn:any) =>  <Button onClick={() =>handleNavLeftBtn(btn.id)} key={btn.id} title={btn.name} linkIcon={btn.linkIcon } />)
+            active?.map((btn:any) =>  <Button isActive={btn.activeObject} onClick={() =>handleNavLeftBtn(btn.id)} key={btn.id} title={btn.name} linkIcon={btn.linkIcon } />)
         }
       </div>
   );
