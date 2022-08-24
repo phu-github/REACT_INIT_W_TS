@@ -4,7 +4,7 @@ import './LeftNavButton.styles.css';
 import {Button} from "../../atoms/Button";
 
 interface LeftNavButton {
-  id?: number; name?: string; linkIcon?: string; activeObject?: string;
+  name?: string; linkIcon?: string; activeObject?: string;
 }
 
 export const LeftNavButton: React.FC<LeftNavButtonProps> = ({
@@ -16,7 +16,7 @@ export const LeftNavButton: React.FC<LeftNavButtonProps> = ({
 
 
   const [changeACtive, setChangeACtive] = useState<LeftNavButton>(
-     {id: 1, activeObject: 'null'}
+     { activeObject: 'null'}
   );
   const handleNavLeftBtn = (index: number) => {
     console.log("leftNavBtnArr", {...leftNavBtnArr});
@@ -27,7 +27,7 @@ export const LeftNavButton: React.FC<LeftNavButtonProps> = ({
   return (
       <div className="button-section-group fixed">
         {
-            leftNavBtnArr?.map((btn:any) =>  <Button onClick={() =>handleNavLeftBtn(btn.id)} key={btn.id} title={btn.name} linkIcon={btn.linkIcon } />)
+            leftNavBtnArr?.map((btn:any, index) =>  <Button key={index} onClick={() =>handleNavLeftBtn(btn.id)} title={btn.name} linkIcon={btn.linkIcon } />)
         }
       </div>
   );
