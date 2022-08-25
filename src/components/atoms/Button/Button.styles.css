@@ -4,14 +4,15 @@
   align-items: center;
   height: 48px;
 }
+.button.active{
+  background: #e8f2ff !important;
+}
 .button-style {
   margin-bottom: 2px;
 }
-
 .button-style:hover {
-  background: #e8f2ff!important;
+  background: #e7eaf3!important;
 }
-
 .button-style:hover .text-style {
   color : Black !important;
 }

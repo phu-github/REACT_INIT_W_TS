@@ -15,11 +15,12 @@ export const Button: React.FC<ButtonProps> = ({
     borderRadius= "none",
     title,
     linkIcon,
+    isActive,
     onClick,
     ...rest
 }) => {
     return (
-        <button onClick={onClick} className={`button ${variant}`} style={{width, height, backgroundColor, border, borderRadius }} {...rest} >
+        <button onClick={onClick} className={`button ${variant} ${isActive}`} style={{width, height, backgroundColor, border, borderRadius }} {...rest} >
             {linkIcon && <Image width="25px" height="25px" margin= "0 0 0 5px" srcImg={linkIcon} />}
             {title && <Text children={title} fontSize={14} fontWeight={300} margin= "0 10px" color="#1a1a1a" />}
         </button>
